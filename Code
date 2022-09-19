@@ -27,6 +27,6 @@ func myFunc(_ closure: () -> (), num: Int){
 
 //4) функция принимает число на вход (год), проверить високосный ли он
 func determineTheYear(year: Int){
-    year % 4 == 0 ? print("Год високосный") : print("Не високосный год")
+    ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) ? print("Год високосный") : print("Не високосный год")
 }
-//determineTheYear(year: 1989)
+//determineTheYear(year: 2004)
