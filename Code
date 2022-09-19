@@ -1,0 +1,32 @@
+//1) функция складывает две целочисленных переменных - отдает на выходе сумму
+let sum: (Int, Int) -> Int = {
+    $0+$1
+}
+//print(sum(0, 3))
+
+
+
+//2) функция принимает кортеж из числа и строки приводит число к строке и ввыводит в консоль резуультат
+typealias NumStr = (num: Int, str: String)
+func numToString (tuple: NumStr) -> (String, String){
+    return (String(tuple.num), tuple.str)
+}
+//print(numToString(tuple: (0, "h")))
+
+
+
+//3) функция принимает на вход опциональное замыкание и целое число, выполняет замыкание только. в случае если число больше 0
+func myFunc(_ closure: () -> (), num: Int){
+    if num > 0{
+        closure()
+    }
+}
+//myFunc(<#T##closure: () -> ()##() -> ()#>, num: <#T##Int#>)
+
+
+
+//4) функция принимает число на вход (год), проверить високосный ли он
+func determineTheYear(year: Int){
+    year % 4 == 0 ? print("Год високосный") : print("Не високосный год")
+}
+//determineTheYear(year: 1989)
